@@ -1,0 +1,150 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* Food collage background */
+  background: #fffbe7;
+  background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80'),
+    url('https://images.unsplash.com/photo-1516685018646-5499d0a7d42f?auto=format&fit=crop&w=800&q=80'),
+    url('https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80');
+  background-size: 350px, 350px, 350px;
+  background-position: 0 0, 175px 175px, 350px 350px;
+  background-repeat: repeat;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(12px) brightness(1.12);
+  background: rgba(255,255,255,0.45);
+}
+
+.food-animation,
+.login-form,
+.login-container h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.food-animation {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.pizza-emoji {
+  font-size: 2.8rem;
+  animation: pizza-bounce 1.2s infinite alternate;
+}
+
+@keyframes pizza-bounce {
+  0% { transform: translateY(0) rotate(-10deg); }
+  50% { transform: translateY(-18px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(-10deg); }
+}
+
+.burger-emoji {
+  font-size: 2.8rem;
+  animation: burger-spin 2.2s linear infinite;
+}
+
+@keyframes burger-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.fries-emoji {
+  font-size: 2.8rem;
+  animation: fries-wave 1.4s infinite alternate;
+}
+
+@keyframes fries-wave {
+  0% { transform: rotate(-8deg) scale(1); }
+  50% { transform: rotate(8deg) scale(1.1); }
+  100% { transform: rotate(-8deg) scale(1); }
+}
+
+.login-form {
+  background: rgba(255, 251, 231, 0.95);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(252, 182, 159, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  min-width: 320px;
+  max-width: 90vw;
+  border: 2px solid #ffe0b2;
+}
+
+.login-form input {
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #ffb347;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: #fff8e1;
+  transition: border 0.2s;
+}
+
+.login-form input:focus {
+  border: 2px solid #ff9800;
+}
+
+.login-form button {
+  padding: 0.8rem 1rem;
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc80 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(255, 179, 71, 0.12);
+  letter-spacing: 1px;
+}
+
+.login-form button:hover {
+  background: linear-gradient(90deg, #ff9800 0%, #ffb347 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.login-container h2 {
+  color: #ff9800;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 8px rgba(252, 182, 159, 0.18);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.login-container h2::before {
+  content: '\1F355'; /* Pizza emoji */
+  font-size: 2.2rem;
+  margin-right: 0.5rem;
+}
+
+.error {
+  color: #e53e3e;
+  background: #fff0f0;
+  border: 1px solid #e53e3e;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  margin-top: -0.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
