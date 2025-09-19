@@ -8,7 +8,7 @@ function AdminLogin({ onLogin }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Updated credentials
+    // Updated credentialsh
     const adminUser = 'iqbal';
     const adminPass = '1234';
     if (username === adminUser && password === adminPass) {
