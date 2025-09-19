@@ -20,7 +20,7 @@ function AdminLogin({ onLogin }) {
 
   return (
     <div className="login-container">
-      {/* Food animation sections */}
+      {/* Food animation sections. */}
       <div className="food-animation">
         <span role="img" aria-label="pizza" className="pizza-emoji">🍕</span>
         <span role="img" aria-label="burger" className="burger-emoji">🍔</span>
