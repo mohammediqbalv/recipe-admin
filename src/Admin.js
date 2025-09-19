@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Admin.css';
 import { BASE_URL } from './Services/baseURL';
 
-// Users will be fetched from backend
+// Users will be fetched from backend.
 // Recipes will be fetched from backend
 
 function Admin() {
